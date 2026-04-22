@@ -56,8 +56,8 @@ spec:
           httpGet:
             path: /health
             port: 8080
-            failureThreshold: 2
-            periodSeconds: 10
+          failureThreshold: 2
+          periodSeconds: 10
         envFrom:
         - configMapRef:
             name: cart
