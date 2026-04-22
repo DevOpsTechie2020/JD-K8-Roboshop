@@ -7,23 +7,23 @@ metadata:
     project: roboshop
     tier: db
     component: redis
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: roboshop
+      tier: db
+      component: redis
+  template:
+    metadata:
+      labels:
         project: roboshop
         tier: db
         component: redis
-    template:
-      metadata:
-        labels:
-          project: roboshop
-          tier: db
-          component: redis
-      spec:
-        containers:
-        - name: redis
-          image: redis:7.0
+    spec:
+      containers:
+      - name: redis
+        image: redis:7.0
 ---
 apiVersion: v1
 kind: Service
