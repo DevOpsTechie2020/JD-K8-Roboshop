@@ -36,7 +36,8 @@ spec:
     spec:
       containers:
       - name: catalogue
-        image: joindevops/catalogue:1.0.0
+        image: bokkrama/roboshop-docker:catalogue-v1
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: "100m"
